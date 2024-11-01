@@ -10,8 +10,12 @@ import PropertyCard, {
 } from "@/components/ripe/PropertyCard/PropertyCard";
 import { ViewContext } from "@/components/ripe/ViewBar/ViewProvider";
 import { GoogleMap, Libraries, useJsApiLoader } from "@react-google-maps/api";
+import { useQuery, useMutation } from "@tanstack/react-query";
+import { useProperties } from "@/services/properties";
 
 export default function Component() {
+  const properties = useProperties();
+
   const defaultMapContainerStyle = {
     width: "100%",
     height: "50vh",
@@ -25,6 +29,16 @@ export default function Component() {
 
   const { view, setView } = useContext(ViewContext);
 
+  const { isPending, isError, data, error } = useQuery({
+    queryKey: ["getProperties"],
+    queryFn: () => properties.getAll(87, 1, 10),
+  });
+
+  if (isPending) {
+    return <p>Loading...</p>;
+  }
+  console.log(data.data);
+
   return (
     <>
       {view ? (
@@ -34,12 +48,19 @@ export default function Component() {
       ) : (
         <div className="flex w-full">
           <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <PropertyCard status={PropertyStatus.Checking}></PropertyCard>
-            <PropertyCard status={PropertyStatus.Prices}></PropertyCard>
+            {data.data.properties?.map((property: any) => {
+              return (
+                <PropertyCard
+                  key={property.id}
+                  property={property}
+                  status={PropertyStatus.Checking}
+                ></PropertyCard>
+              );
+            })}
+
             <Card className="hidden md:block col-span-1 md:col-span-2 w-full light-mode rounded-md">
               <GoogleMap mapContainerStyle={mapContainerStyle}></GoogleMap>
             </Card>
-            <PropertyCard status={PropertyStatus.SoldOut}></PropertyCard>
           </div>
         </div>
       )}
