@@ -904,6 +904,14 @@ img, video {
   height: 100vh;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
 .max-h-64 {
   max-height: 16rem;
 }
@@ -1084,6 +1092,26 @@ img, video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[20px\] {
+  width: 20px;
+}
+
+.w-\[120px\] {
+  width: 120px;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[60px\] {
+  width: 60px;
+}
+
+.w-\[50px\] {
+  width: 50px;
 }
 
 .min-w-10 {
@@ -2411,6 +2439,10 @@ img, video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .\!px-1 {

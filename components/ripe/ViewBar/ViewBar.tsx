@@ -16,13 +16,24 @@ import {
   Rows3,
   ArrowDownUp,
   SlidersHorizontal,
+  Users,
 } from "lucide-react"; // Importing icons from lucide-react
 import { useContext, useState } from "react";
 import { ViewContext } from "./ViewProvider";
 import { Chip } from "@nextui-org/chip";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  useDisclosure,
+} from "@nextui-org/modal";
+import { DatePicker } from "@nextui-org/date-picker";
+import FiltersModalButton from "./Filters";
 
 export const ViewBar = () => {
   const { view, setView } = useContext(ViewContext);
+
+  const { isOpen, onClose, onOpen } = useDisclosure();
 
   return (
     <>
@@ -104,14 +115,8 @@ export const ViewBar = () => {
           >
             Sort By
           </Button>
-          <Button
-            isIconOnly
-            variant="light"
-            aria-label="Sort By"
-            className="bg-primary text-white"
-          >
-            <SlidersHorizontal />
-          </Button>
+
+          <FiltersModalButton />
         </NavbarContent>
       </NextUINavbar>
     </>

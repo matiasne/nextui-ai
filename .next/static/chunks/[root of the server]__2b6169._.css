@@ -8416,4 +8416,34 @@ img, video {
 }
 
 
-/*# sourceMappingURL=%5Broot%20of%20the%20server%5D__e2ab11._.css.map*/
+/* [project]/components/drawer/styles.css [app-client] (css) */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 0;
+}
+
+.drawer-animated {
+  transform: translateX(-100%);
+}
+
+.drawer-animated-slide-in {
+  animation: .3s forwards slide-in;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+
+/*# sourceMappingURL=%5Broot%20of%20the%20server%5D__2b6169._.css.map*/

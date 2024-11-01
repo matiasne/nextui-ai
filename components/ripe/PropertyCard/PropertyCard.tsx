@@ -66,7 +66,7 @@ export default function PropertyCard({ status }: { status: PropertyStatus }) {
             ))}
           </div>
         </div>
-        <div className="h-[56px]">
+        <div className="h-[56px] w-full">
           {status === PropertyStatus.Checking ? (
             <CheckingAvailability />
           ) : status === PropertyStatus.Prices ? (
