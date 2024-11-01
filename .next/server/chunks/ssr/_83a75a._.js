@@ -52,7 +52,7 @@ const libraries = [
 function MapProvider({ children }) {
     // Load the Google Maps JavaScript API asynchronously
     const { isLoaded: scriptLoaded, loadError } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$google$2d$maps$2f$api$2f$dist$2f$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useJsApiLoader"])({
-        googleMapsApiKey: "AIzaSyCItjGw61jFV0PinXNPEXqBYdB0Evj0omI",
+        googleMapsApiKey: "AIzaSyCsgXaT2W9qpZe1908aG6ukEJ_vdqQKVKQ",
         libraries: libraries
     });
     if (loadError) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
