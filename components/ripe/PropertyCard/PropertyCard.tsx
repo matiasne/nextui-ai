@@ -23,7 +23,7 @@ export default function PropertyCard({ status }: { status: PropertyStatus }) {
           className="object-cover w-full rounded-none"
         />
       </CardHeader>
-      <CardBody className="p-0">
+      <CardBody className="p-0 justify-end">
         <div className="p-4 bg-background">
           <h3 className="text-2xl font-semibold mb-2">
             Silverado Lodge at Canyons Village
