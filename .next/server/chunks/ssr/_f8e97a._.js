@@ -177,8 +177,10 @@ let PropertyStatus;
 })(PropertyStatus || (PropertyStatus = {}));
 function PropertyCard({ status, property }) {
     function getAverageRating() {
-        const ratingSum = property.rating.reduce((acc, curr)=>acc + curr.stars, 0);
-        return (Number(ratingSum) / property.rating.length).toFixed(1);
+        const ratingSum = property.rating.reduce((acc, curr)=>{
+            return acc + Number(curr.stars);
+        }, 0);
+        return Number((ratingSum / property.rating.length).toFixed(1));
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$card$2f$dist$2f$chunk$2d$H4VOEXHF$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__card_default__as__Card$3e$__["Card"], {
         className: "max-w-lg light-mode justify-end rounded-md",
@@ -191,12 +193,12 @@ function PropertyCard({ status, property }) {
                     className: "object-cover w-full h-[300px] rounded-none"
                 }, void 0, false, {
                     fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                    lineNumber: 35,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                lineNumber: 34,
+                lineNumber: 33,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$card$2f$dist$2f$chunk$2d$5ALFRFZW$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__card_body_default__as__CardBody$3e$__["CardBody"], {
@@ -210,7 +212,7 @@ function PropertyCard({ status, property }) {
                                 children: property.name
                             }, void 0, false, {
                                 fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                lineNumber: 43,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -221,7 +223,7 @@ function PropertyCard({ status, property }) {
                                         children: "not defined"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                        lineNumber: 45,
+                                        lineNumber: 44,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -235,7 +237,7 @@ function PropertyCard({ status, property }) {
                                                         className: "w-5 h-5 text-yellow-400 fill-current"
                                                     }, i, false, {
                                                         fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                        lineNumber: 51,
+                                                        lineNumber: 50,
                                                         columnNumber: 21
                                                     }, this);
                                                 }
@@ -244,7 +246,7 @@ function PropertyCard({ status, property }) {
                                                         className: "w-5 h-5 text-yellow-400 fill-current"
                                                     }, i, false, {
                                                         fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                        lineNumber: 63,
+                                                        lineNumber: 62,
                                                         columnNumber: 21
                                                     }, this);
                                                 }
@@ -256,20 +258,20 @@ function PropertyCard({ status, property }) {
                                                                 className: "w-5 h-5 text-yellow-400 fill-current absolute z-50"
                                                             }, i, false, {
                                                                 fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                                lineNumber: 76,
+                                                                lineNumber: 75,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
                                                                 className: "w-5 h-5 text-gray-200 fill-current absolute"
                                                             }, i, false, {
                                                                 fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                                lineNumber: 80,
+                                                                lineNumber: 79,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                        lineNumber: 75,
+                                                        lineNumber: 74,
                                                         columnNumber: 21
                                                     }, this);
                                                 } else {
@@ -277,7 +279,7 @@ function PropertyCard({ status, property }) {
                                                         className: "w-5 h-5 text-gray-200 fill-current"
                                                     }, i, false, {
                                                         fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                        lineNumber: 88,
+                                                        lineNumber: 87,
                                                         columnNumber: 21
                                                     }, this);
                                                 }
@@ -292,13 +294,13 @@ function PropertyCard({ status, property }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                lineNumber: 95,
+                                                lineNumber: 94,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                        lineNumber: 47,
+                                        lineNumber: 46,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -332,20 +334,20 @@ function PropertyCard({ status, property }) {
                                                             className: "w-4 h-4 mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                            lineNumber: 110,
+                                                            lineNumber: 109,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: label
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                            lineNumber: 111,
+                                                            lineNumber: 110,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, index, true, {
                                                     fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                    lineNumber: 106,
+                                                    lineNumber: 105,
                                                     columnNumber: 17
                                                 }, this)),
                                             [
@@ -376,74 +378,74 @@ function PropertyCard({ status, property }) {
                                                             className: "w-4 h-4 mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                            lineNumber: 121,
+                                                            lineNumber: 120,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: label
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                            lineNumber: 122,
+                                                            lineNumber: 121,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, index, true, {
                                                     fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                                    lineNumber: 120,
+                                                    lineNumber: 119,
                                                     columnNumber: 17
                                                 }, this))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 98,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                                lineNumber: 44,
+                                lineNumber: 43,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                        lineNumber: 42,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "h-[56px] w-full",
                         children: status === "0" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$footer$2f$Checking$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                            lineNumber: 130,
+                            lineNumber: 129,
                             columnNumber: 13
                         }, this) : status === "1" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$footer$2f$PriceFooter$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                            lineNumber: 132,
+                            lineNumber: 131,
                             columnNumber: 13
                         }, this) : status === "2" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$footer$2f$WarningSelectDate$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                            lineNumber: 134,
+                            lineNumber: 133,
                             columnNumber: 13
                         }, this) : status === "3" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$footer$2f$WarningSelectDate$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                            lineNumber: 136,
+                            lineNumber: 135,
                             columnNumber: 13
                         }, this) : null
                     }, void 0, false, {
                         fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                        lineNumber: 128,
+                        lineNumber: 127,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-                lineNumber: 41,
+                lineNumber: 40,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/ripe/PropertyCard/PropertyCard.tsx",
-        lineNumber: 33,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 } // Add the following CSS styles for light mode

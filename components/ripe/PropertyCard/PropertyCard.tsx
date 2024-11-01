@@ -21,12 +21,11 @@ export default function PropertyCard({
   property: Property;
 }) {
   function getAverageRating(): number {
-    const ratingSum: Rating = property.rating.reduce(
-      (acc, curr) => acc + curr.stars,
-      0
-    );
+    const ratingSum: number = property.rating.reduce((acc, curr) => {
+      return acc + Number(curr.stars);
+    }, 0);
 
-    return (Number(ratingSum) / property.rating.length).toFixed(1);
+    return Number((ratingSum / property.rating.length).toFixed(1));
   }
 
   return (
