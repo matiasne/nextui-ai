@@ -63,7 +63,7 @@ export const ViewBar = () => {
           </Button>
           <Chip
             onClose={() => console.log("close")}
-            className="text-xs bg-secondary-500 text-neutral-100 rounded-md"
+            className="text-xs bg-secondary-500 text-neutral-100 rounded-md hidden lg:flex"
           >
             Features: Free wifi, Eco-Friendly. Areas: North Town
           </Chip>

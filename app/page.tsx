@@ -11,18 +11,18 @@ import PropertyCard, {
 import { ViewContext } from "@/components/ripe/ViewBar/ViewProvider";
 import { GoogleMap, Libraries, useJsApiLoader } from "@react-google-maps/api";
 
-export const defaultMapContainerStyle = {
-  width: "100%",
-  height: "50vh",
-  borderRadius: "15px 0px 0px 15px",
-};
-
-export const mapContainerStyle = {
-  width: "100%",
-  height: "500px",
-};
-
 export default function Component() {
+  const defaultMapContainerStyle = {
+    width: "100%",
+    height: "50vh",
+    borderRadius: "15px 0px 0px 15px",
+  };
+
+  const mapContainerStyle = {
+    width: "100%",
+    height: "500px",
+  };
+
   const { view, setView } = useContext(ViewContext);
 
   return (

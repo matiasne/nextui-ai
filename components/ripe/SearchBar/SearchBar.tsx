@@ -40,12 +40,14 @@ export const SearchBar = () => {
         position="static"
         className="bg-foreground bg-opacity-10 justify-center p-6"
       >
-        <NavbarContent className="flex flex-row w-full g-4 " justify="center">
-          <div className="text-md font-light text-2xl">Book your stay</div>
-          <NavbarItem className="hidden lg:flex">
+        <NavbarContent className="flex-row w-full g-4 " justify="center">
+          <div className="text-md font-light text-2xl hidden lg:flex ">
+            Book your stay
+          </div>
+          <NavbarItem>
             <CheckInOutDatePicker />
           </NavbarItem>
-          <NavbarItem className="hidden lg:flex">
+          <NavbarItem>
             <GuestSelection />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex mt-2  border-neutral-400 border-opacity-25 border-l-1 pl-4">
