@@ -12,7 +12,7 @@ const libraries = ["places", "drawing", "geometry"];
 export function MapProvider({ children }: { children: ReactNode }) {
   // Load the Google Maps JavaScript API asynchronously
   const { isLoaded: scriptLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyBWDcF47WZkfVRW7Mu6BP6phRULcytV7kg",
+    googleMapsApiKey: "AIzaSyCItjGw61jFV0PinXNPEXqBYdB0Evj0omI",
     libraries: libraries as Libraries,
   });
 
