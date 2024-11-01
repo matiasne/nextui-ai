@@ -20,7 +20,6 @@ export const defaultMapContainerStyle = {
 export const mapContainerStyle = {
   width: "100%",
   height: "500px",
-  borderRadius: "15px 0px 0px 15px",
 };
 
 export default function Component() {
@@ -38,7 +37,7 @@ export default function Component() {
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <PropertyCard status={PropertyStatus.Checking}></PropertyCard>
               <PropertyCard status={PropertyStatus.Prices}></PropertyCard>
-              <Card className="hidden md:block col-span-1 md:col-span-2 w-full light-mode">
+              <Card className="hidden md:block col-span-1 md:col-span-2 w-full light-mode rounded-md">
                 <GoogleMap mapContainerStyle={mapContainerStyle}></GoogleMap>
               </Card>
               <PropertyCard status={PropertyStatus.SoldOut}></PropertyCard>

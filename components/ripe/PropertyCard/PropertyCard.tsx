@@ -15,7 +15,7 @@ export enum PropertyStatus {
 
 export default function PropertyCard({ status }: { status: PropertyStatus }) {
   return (
-    <Card className="max-w-md light-mode justify-end">
+    <Card className="max-w-md light-mode justify-end rounded-md">
       <CardHeader className="p-0">
         <Image
           alt="Mountain lodge exterior view with dramatic sky"
