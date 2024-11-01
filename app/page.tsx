@@ -48,19 +48,32 @@ export default function Component() {
       ) : (
         <div className="flex w-full">
           <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {data.data.properties?.map((property: any) => {
-              return (
-                <PropertyCard
-                  key={property.id}
-                  property={property}
-                  status={PropertyStatus.Checking}
-                ></PropertyCard>
-              );
+            {data.data.properties?.map((property: any, index: number) => {
+              if (index < 2) {
+                return (
+                  <PropertyCard
+                    key={property.id}
+                    property={property}
+                    status={PropertyStatus.Checking}
+                  ></PropertyCard>
+                );
+              }
             })}
-
             <Card className="hidden md:block col-span-1 md:col-span-2 w-full light-mode rounded-md">
               <GoogleMap mapContainerStyle={mapContainerStyle}></GoogleMap>
             </Card>
+
+            {data.data.properties?.map((property: any, index: number) => {
+              if (index > 1) {
+                return (
+                  <PropertyCard
+                    key={property.id}
+                    property={property}
+                    status={PropertyStatus.Checking}
+                  ></PropertyCard>
+                );
+              }
+            })}
           </div>
         </div>
       )}

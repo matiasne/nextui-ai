@@ -583,15 +583,17 @@ function Component() {
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: " grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4",
                 children: [
-                    data.data.properties?.map((property)=>{
-                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$PropertyCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            property: property,
-                            status: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$PropertyCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PropertyStatus"].Checking
-                        }, property.id, false, {
-                            fileName: "[project]/app/page.tsx",
-                            lineNumber: 53,
-                            columnNumber: 17
-                        }, this);
+                    data.data.properties?.map((property, index)=>{
+                        if (index < 2) {
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$PropertyCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                property: property,
+                                status: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$PropertyCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PropertyStatus"].Checking
+                            }, property.id, false, {
+                                fileName: "[project]/app/page.tsx",
+                                lineNumber: 54,
+                                columnNumber: 19
+                            }, this);
+                        }
                     }),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$card$2f$dist$2f$chunk$2d$H4VOEXHF$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__card_default__as__Card$3e$__["Card"], {
                         className: "hidden md:block col-span-1 md:col-span-2 w-full light-mode rounded-md",
@@ -599,14 +601,26 @@ function Component() {
                             mapContainerStyle: mapContainerStyle
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 62,
+                            lineNumber: 63,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 61,
+                        lineNumber: 62,
                         columnNumber: 13
-                    }, this)
+                    }, this),
+                    data.data.properties?.map((property, index)=>{
+                        if (index > 1) {
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$PropertyCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                property: property,
+                                status: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$PropertyCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PropertyStatus"].Checking
+                            }, property.id, false, {
+                                fileName: "[project]/app/page.tsx",
+                                lineNumber: 69,
+                                columnNumber: 19
+                            }, this);
+                        }
+                    })
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/page.tsx",
