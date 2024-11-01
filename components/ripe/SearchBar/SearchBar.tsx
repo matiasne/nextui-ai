@@ -39,7 +39,7 @@ export const SearchBar = () => {
       <NextUINavbar
         maxWidth="full"
         position="sticky"
-        className="bg-foreground bg-opacity-10 justify-center h-[109px]"
+        className="bg-foreground bg-opacity-10 justify-center p-5"
       >
         <NavbarContent className="flex flex-row w-full g-4 " justify="center">
           <div className="text-md font-light text-2xl">Book your stay</div>

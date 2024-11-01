@@ -2409,6 +2409,10 @@ img, video {
   padding: 1rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .\!px-1 {
   padding-left: .25rem !important;
   padding-right: .25rem !important;

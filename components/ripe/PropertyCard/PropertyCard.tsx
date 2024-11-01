@@ -15,7 +15,7 @@ export enum PropertyStatus {
 
 export default function PropertyCard({ status }: { status: PropertyStatus }) {
   return (
-    <Card className="max-w-md light-mode justify-end rounded-md">
+    <Card className="max-w-lg light-mode justify-end rounded-md">
       <CardHeader className="p-0">
         <Image
           alt="Mountain lodge exterior view with dramatic sky"
@@ -40,13 +40,13 @@ export default function PropertyCard({ status }: { status: PropertyStatus }) {
           </div>
           <div className="flex flex-wrap gap-4 mb-0">
             {[
-              { icon: Wifi, label: "" },
-              { icon: Car, label: "" },
-              { icon: Utensils, label: "" },
-              { icon: Snowflake, label: "" },
-            ].map(({ icon: Icon, label }) => (
+              { icon: Wifi, label: "", index: 1 },
+              { icon: Car, label: "", index: 2 },
+              { icon: Utensils, label: "", index: 3 },
+              { icon: Snowflake, label: "", index: 4 },
+            ].map(({ icon: Icon, label, index }) => (
               <div
-                key={label}
+                key={index}
                 className=" flex items-center text-foreground-600"
               >
                 <Icon className="w-4 h-4 mr-2" />
@@ -54,12 +54,12 @@ export default function PropertyCard({ status }: { status: PropertyStatus }) {
               </div>
             ))}
             {[
-              { icon: Wifi, label: "" },
-              { icon: Car, label: "" },
-              { icon: Utensils, label: "" },
-              { icon: Snowflake, label: "" },
-            ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center  opacity-25">
+              { icon: Wifi, label: "", index: 1 },
+              { icon: Car, label: "", index: 2 },
+              { icon: Utensils, label: "", index: 3 },
+              { icon: Snowflake, label: "", index: 4 },
+            ].map(({ icon: Icon, label, index }) => (
+              <div key={index} className="flex items-center  opacity-25">
                 <Icon className="w-4 h-4 mr-2" />
                 <span>{label}</span>
               </div>
