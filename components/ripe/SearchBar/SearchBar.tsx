@@ -10,6 +10,7 @@ import {
 import { Calendar, SearchIcon, UsersRound } from "lucide-react";
 import CheckInOutDatePicker from "./CheckInOutDatePicker";
 import GuestSelection from "./RoomPickerModal";
+import { useViewContext } from "../ViewBar/ViewProvider";
 
 export const SearchBar = () => {
   const searchInput = (
@@ -36,7 +37,7 @@ export const SearchBar = () => {
   return (
     <>
       <NextUINavbar
-        maxWidth="xl"
+        maxWidth="full"
         position="sticky"
         className="bg-foreground bg-opacity-10 justify-center h-[109px]"
       >

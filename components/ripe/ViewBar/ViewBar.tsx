@@ -17,16 +17,19 @@ import {
   ArrowDownUp,
   SlidersHorizontal,
 } from "lucide-react"; // Importing icons from lucide-react
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ViewContext } from "./ViewProvider";
+import { Chip } from "@nextui-org/chip";
 
 export const ViewBar = () => {
-  const [showMap, setShowMap] = useState(false);
+  const { view, setView } = useContext(ViewContext);
+
   return (
     <>
       <NextUINavbar
-        maxWidth="xl"
+        maxWidth="full"
         position="sticky"
-        className="bg-background bg-opacity-80 w-full justify-center h-[65px]  shadow-md overflow-hidden"
+        className="bg-background bg-opacity-80 w-full justify-center h-[65px]  shadow-md"
       >
         <NavbarContent justify="start">
           <Button
@@ -35,20 +38,27 @@ export const ViewBar = () => {
             variant="light"
             aria-label="list"
             isIconOnly
-            onPress={() => setShowMap(false)}
+            onPress={() => setView(false)}
           >
-            <Rows3 className={showMap ? "" : "text-primary"} />
+            <Rows3 className={view ? "" : "text-primary"} />
           </Button>
           <Button
             variant="light"
             aria-label="map"
             isIconOnly
-            onPress={() => setShowMap(true)}
+            onPress={() => setView(true)}
           >
-            <Map className={showMap ? "text-primary" : ""} />
+            <Map className={view ? "text-primary" : ""} />
           </Button>
+          <Chip
+            onClose={() => console.log("close")}
+            className="text-xs bg-secondary-500 text-neutral-100 rounded-md"
+          >
+            Features: Free wifi, Eco-Friendly. Areas: North Town
+          </Chip>
         </NavbarContent>
-        <NavbarContent className="  g-4 " justify="center">
+
+        <NavbarContent className="g-4 overflow-hidden" justify="center">
           <NavbarItem className="hidden lg:flex">
             <div className="flex items-center justify-between p-4 ">
               <div className="flex space-x-4">

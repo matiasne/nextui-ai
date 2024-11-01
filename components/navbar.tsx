@@ -32,7 +32,7 @@ import { ViewBar } from "./ripe/ViewBar/ViewBar";
 export const Navbar = () => {
   return (
     <>
-      <NextUINavbar maxWidth="xl" position="sticky">
+      <NextUINavbar maxWidth="full" position="sticky">
         <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
           <NavbarBrand as="li" className="gap-3 max-w-fit">
             <NextLink
