@@ -31,7 +31,7 @@ export default function Component() {
 
   const { isPending, isError, data, error } = useQuery({
     queryKey: ["getProperties"],
-    queryFn: () => properties.getAll(6, 1, 10),
+    queryFn: () => properties.getAll(6, 1, 500),
   });
 
   if (isPending) {
