@@ -540,7 +540,7 @@ function Component() {
         queryKey: [
             "getProperties"
         ],
-        queryFn: ()=>properties.getAll(87, 1, 10)
+        queryFn: ()=>properties.getAll(6, 1, 500)
     });
     if (isPending) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -586,7 +586,29 @@ function Component() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$nextui$2d$org$2f$card$2f$dist$2f$chunk$2d$H4VOEXHF$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__card_default__as__Card$3e$__["Card"], {
                         className: "hidden md:block col-span-1 md:col-span-2 w-full light-mode rounded-md",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$google$2d$maps$2f$api$2f$dist$2f$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["GoogleMap"], {
-                            mapContainerStyle: mapContainerStyle
+                            mapContainerClassName: "w-full h-full",
+                            mapTypeId: "satellite",
+                            zoom: 3,
+                            center: {
+                                lat: 33.8588611,
+                                lng: -84.2484869
+                            },
+                            mapContainerStyle: mapContainerStyle,
+                            children: data.data.properties?.map((property, index)=>{
+                                const marker = {
+                                    position: {
+                                        lat: Number(property.addresses[0].geolocation.latitude),
+                                        lng: Number(property.addresses[0].geolocation.longitude)
+                                    }
+                                };
+                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$future$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$google$2d$maps$2f$api$2f$dist$2f$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Marker"], {
+                                    ...marker
+                                }, void 0, false, {
+                                    fileName: "[project]/app/page.tsx",
+                                    lineNumber: 81,
+                                    columnNumber: 23
+                                }, this);
+                            })
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
                             lineNumber: 63,
@@ -604,7 +626,7 @@ function Component() {
                                 status: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ripe$2f$PropertyCard$2f$PropertyCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PropertyStatus"].Checking
                             }, property.id, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 69,
+                                lineNumber: 94,
                                 columnNumber: 19
                             }, this);
                         }

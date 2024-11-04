@@ -9,7 +9,7 @@ import PropertyCard, {
   PropertyStatus,
 } from "@/components/ripe/PropertyCard/PropertyCard";
 import { ViewContext } from "@/components/ripe/ViewBar/ViewProvider";
-import { GoogleMap, Libraries, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap, Marker } from "@react-google-maps/api";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { useProperties } from "@/services/properties";
 
@@ -60,7 +60,32 @@ export default function Component() {
               }
             })}
             <Card className="hidden md:block col-span-1 md:col-span-2 w-full light-mode rounded-md">
-              <GoogleMap mapContainerStyle={mapContainerStyle}></GoogleMap>
+              <GoogleMap
+                mapContainerClassName="w-full h-full"
+                mapTypeId="satellite"
+                zoom={3}
+                center={{ lat: 33.8588611, lng: -84.2484869 }}
+                mapContainerStyle={mapContainerStyle}
+              >
+                {data.data.properties?.map(
+                  (property: Property, index: number) => {
+                    const marker = {
+                      position: {
+                        lat: Number(property.addresses[0].geolocation.latitude),
+                        lng: Number(
+                          property.addresses[0].geolocation.longitude
+                        ),
+                      },
+                    };
+                    return (
+                      <Marker
+                        {...marker}
+                        // onRightClick={() => props.onMarkerRightClick(marker)}
+                      />
+                    );
+                  }
+                )}
+              </GoogleMap>
             </Card>
 
             {data.data.properties?.map((property: any, index: number) => {
