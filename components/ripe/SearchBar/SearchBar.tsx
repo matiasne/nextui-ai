@@ -10,6 +10,8 @@ import {
 import { Calendar, SearchIcon, UsersRound } from "lucide-react";
 import CheckInOutDatePicker from "./CheckInOutDatePicker";
 import GuestSelection from "./RoomPickerModal";
+import { RRButton } from "@/components/atoms/Button/Button";
+import { Button } from "@nextui-org/button";
 
 export const SearchBar = () => {
   const searchInput = (
@@ -41,9 +43,17 @@ export const SearchBar = () => {
         className="bg-foreground bg-opacity-10 justify-center p-6"
       >
         <NavbarContent className="flex-row w-full g-4 " justify="center">
+          <Button href="/" color="primary" variant="solid">
+            Button
+          </Button>
+
+          <Button href="/" color="secondary" variant="bordered">
+            Button
+          </Button>
           <div className="text-md font-light text-2xl hidden lg:flex ">
             Book your stay
           </div>
+
           <NavbarItem>
             <CheckInOutDatePicker />
           </NavbarItem>

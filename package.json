@@ -23,7 +23,9 @@
 		"@nextui-org/listbox": "2.1.27",
 		"@nextui-org/modal": "^2.0.41",
 		"@nextui-org/navbar": "2.0.37",
+		"@nextui-org/skeleton": "^2.0.32",
 		"@nextui-org/snippet": "2.0.43",
+		"@nextui-org/spinner": "^2.0.34",
 		"@nextui-org/switch": "2.0.34",
 		"@nextui-org/system": "2.2.6",
 		"@nextui-org/theme": "2.2.11",
@@ -40,7 +42,8 @@
 		"next": "14.2.4",
 		"next-themes": "^0.2.1",
 		"react": "18.3.1",
-		"react-dom": "18.3.1"
+		"react-dom": "18.3.1",
+		"react-intersection-observer": "^9.13.1"
 	},
 	"devDependencies": {
 		"@types/node": "20.5.7",

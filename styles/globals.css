@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gm-style .gm-style-iw-c {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.gm-style-iw-chr {
+  position: absolute;
+  z-index: 100;
+  top: 5px;
+  right: 5px;
+  border-radius: 100px;
+  background: white;
+}
+
+.gm-style-iw-chr button {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.gm-style-iw-chr button span {
+  margin: 3px !important;
+  stroke: orange !important;
+}
+
+.gm-style-iw-d {
+  padding: 0px !important;
+  margin: 0px !important;
+  overflow: auto !important;
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/app/page.tsx"],"sourcesContent":["\"use client\";\n\nimport { usePublisher } from \"./providers/PublisherProvider\";\n\nexport default function Component() {\n  return <></>;\n}\n\n// Add the following CSS styles for light mode\n// .light-mode {\n//   background-color: white; // Set background color for light mode\n//   color: black; // Set text color for light mode\n// }\n// .light-mode .bg-red-500 {\n//   background-color: #f56565; // Adjust background color for price section\n// }\n"],"names":[],"mappings":";;;;;AAAA;;AAIe,SAAS;IACtB,qBAAO;AACT,EAEA,8CAA8C;CAC9C,gBAAgB;CAChB,oEAAoE;CACpE,mDAAmD;CACnD,IAAI;CACJ,4BAA4B;CAC5B,4EAA4E;CAC5E,IAAI"}},
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

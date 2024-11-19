@@ -13,6 +13,18 @@ module.exports = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+      colors: {
+        customblue: {
+          DEFAULT: "#0000FF", // Main color for "customBlue"
+          light: "#0000FF", // Optional lighter variant
+          dark: "#0000FF", // Optional darker variant
+        },
+        error: {
+          DEFAULT: "#00FF00", // Main color for "error"
+          light: "#FF0000", // Optional lighter variant
+          dark: "#FF0000", // Optional darker variant
+        },
+      },
     },
   },
   darkMode: "class",
@@ -98,6 +110,7 @@ module.exports = {
               900: "#00524D",
               foreground: "#FFFFFF",
             },
+
             focus: "#FC6E51",
           },
         },
@@ -146,6 +159,7 @@ module.exports = {
               900: "#00524D",
               foreground: "#FFFFFF",
             },
+
             focus: "#FC6E51",
           },
         },
